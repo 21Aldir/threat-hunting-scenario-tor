@@ -12,7 +12,8 @@
 - Tor Browser
   
 <img width="746" height="308" alt="image" src="https://github.com/user-attachments/assets/fc888c04-492c-4136-ab2b-a764bdfacc31" />
-<img width="1024" height="512" alt="image" src="https://github.com/user-attachments/assets/8bf8c4c0-4304-4930-9f79-d6d71a9eec86" />
+_______________________
+<img width="746" height="512" alt="image" src="https://github.com/user-attachments/assets/8bf8c4c0-4304-4930-9f79-d6d71a9eec86" />
 
 ## Scenario
 
