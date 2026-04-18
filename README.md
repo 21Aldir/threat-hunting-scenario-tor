@@ -40,7 +40,8 @@ DeviceFileEvents
 | order by Timestamp desc  
 | project Timestamp, DeviceName, ActionType, FileName, FolderPath, SHA256, Account
 ```
-<img width="1212" alt="image" src="">
+<img width="1058" height="380" alt="image" src="https://github.com/user-attachments/assets/b605378c-6586-4bfa-a1dc-0ae223a55a25" />
+
 
 ---
 
@@ -56,7 +57,10 @@ DeviceProcessEvents
 | where ProcessCommandLine contains "tor-browser-windows-x86_64-portable-15.0.9.exe"  
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine
 ```
-<img width="1212" alt="image" src="">
+<img width="1132" height="61" alt="image" src="https://github.com/user-attachments/assets/52409627-ffe4-4598-b347-7e44666cc97b" />
+
+
+
 
 ---
 
@@ -73,7 +77,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ActionType, FileName, FolderPath, SHA256, ProcessCommandLine  
 | order by Timestamp desc
 ```
-<img width="1212" alt="image" src="">
+<img width="1115" height="241" alt="image" src="https://github.com/user-attachments/assets/2bd313e7-1d6f-4845-9b53-77d9e9c0dfba" />
 
 ---
 
@@ -88,11 +92,19 @@ DeviceNetworkEvents
 | where DeviceName == "aldir-1"  
 | where InitiatingProcessAccountName != "system"  
 | where InitiatingProcessFileName in ("tor.exe", "firefox.exe")  
-| where RemotePort in ("9001", "9030", "9040", "9050", "9051", "9150", "80", "443")  
+| where RemotePort in ("9001", "9030", "9040", "9050", "9051", "9150",)  
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, RemoteIP, RemotePort, RemoteUrl, InitiatingProcessFileName, InitiatingProcessFolderPath  
 | order by Timestamp desc
+
+DeviceNetworkEvents
+| where DeviceName == "aldir-1"
+| where RemoteIP in ("82.67.111.215", "51.91.241.137")
+| project Timestamp, RemoteIP, RemotePort, InitiatingProcessFileName, InitiatingProcessCommandLine
 ```
-<img width="1212" alt="image" src="">
+<img width="1294" height="105" alt="image" src="https://github.com/user-attachments/assets/66de8769-8fb6-4b99-89a8-c34513751523" />
+
+<img width="822" height="197" alt="image" src="https://github.com/user-attachments/assets/6b321cb4-dc47-4e88-ae05-1b4181dbfe78" />
+
 
 ---
 
